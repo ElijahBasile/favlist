@@ -14,7 +14,7 @@ const app = {
 
     renderListItem(place) {
         const item = document.createElement('li')
-        item.dataset.id = flick.id
+        item.dataset.id = place.id
         item.textContent = place.name
         return item
     },
@@ -26,8 +26,11 @@ const app = {
             id: ++this.max,
             name: p.placeName.value,
         }
-        this.places.push(place)
-        this.list.appendChild(this.renderListItem(place))
+        this.places.unshift(place)
+
+        const item = this.renderListItem(place)
+        this.list.insertBefore(item, this.list.firstElementChild)
+
         p.reset()
     },
 

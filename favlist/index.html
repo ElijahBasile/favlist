@@ -29,13 +29,21 @@
                         type="submit"
                         class="button"
                     >
-                        Add to List
+                        Add Attraction
                     </button>
                 </div>
             </div>
         </form>
 
-        <ul id="placeList"></ul>
+        <ul id="placeList" class="no-bullet">
+            <li class="place grid-x align-middle">
+                <span class="placeName auto cell">Le Main</span>
+                <span class="actions shrink cell">
+                    <button class="button warning">fav</button>
+                    <button class="button alert">del</button>
+                </span>
+            </li>
+        </ul>
     </main>
 
     <div id="places">
