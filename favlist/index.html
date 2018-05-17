@@ -3,20 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Places in Paris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-   
 </head>
 <body>
-    <h1>Places in Paris</h1>
-
-    <form class="add">
-        <label for="addList">Enter another attraction in Paris:</label>
-        <input type="text" name="addList" />
-        <button type="submit" id="submitItem">Add to List</button>
-    </form>
-
+    <header>
+        <h1>Places in Paris</h1>
+    </header>
+    <div class="input-group">
+    <main>
+        <form id="placeForm">
+            <input 
+                placeholder="Enter an Attraction" 
+                type="text" 
+                name="placeName" 
+                class="input-group-field"
+                autofocus
+                required
+            >
+            <div class="input-group-button">
+                <button 
+                    type="submit"
+                    class="button"
+                >
+                    Add to List
+                </button>
+            </div>
+        </form>
+    </main>
+    </div>
     <div id="places">
         <ul id="list">
 
