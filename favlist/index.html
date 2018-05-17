@@ -12,28 +12,32 @@
     <header>
         <h1>Places in Paris</h1>
     </header>
-    <div class="input-group">
+
     <main>
         <form id="placeForm">
-            <input 
-                placeholder="Enter an Attraction" 
-                type="text" 
-                name="placeName" 
-                class="input-group-field"
-                autofocus
-                required
-            >
-            <div class="input-group-button">
-                <button 
-                    type="submit"
-                    class="button"
+            <div class="input-group">
+                <input 
+                    placeholder="Enter an Attraction" 
+                    type="text" 
+                    name="placeName" 
+                    class="input-group-field"
+                    autofocus
+                    required
                 >
-                    Add to List
-                </button>
+                <div class="input-group-button">
+                    <button 
+                        type="submit"
+                        class="button"
+                    >
+                        Add to List
+                    </button>
+                </div>
             </div>
         </form>
+
+        <ul id="placeList"></ul>
     </main>
-    </div>
+
     <div id="places">
         <ul id="list">
 
