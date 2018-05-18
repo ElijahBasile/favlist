@@ -6,3 +6,19 @@ main {
 .flickName {
     margin: 0 .75rem
 }
+
+.template {
+    display: none;
+}
+
+.favorite {
+    background-color: gold;
+}
+
+li:first-child
+.button.moveup,
+li:nth-last-child(2)
+.button.movedown {
+    background-color: #aaa;
+    cursor: not-allowed;
+}

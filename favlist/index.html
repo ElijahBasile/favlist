@@ -36,9 +36,12 @@
         </form>
 
         <ul id="placeList" class="no-bullet">
-            <li class="place grid-x align-middle">
-                <span class="placeName auto cell">Le Main</span>
-                <span class="actions shrink cell">
+            <li class="template place grid-x align-middle">
+                <span contenteditable="false" class="placeName auto cell"></span>
+                <span  class="actions shrink cell">
+                    <button class="button edit">Edit</button>
+                    <button class="button moveup">Move Up</button>
+                    <button class="button movedown">Move Down</button>
                     <button class="button warning">fav</button>
                     <button class="button alert">del</button>
                 </span>
