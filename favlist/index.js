@@ -42,7 +42,7 @@ const app = {
                 const temp = this.places[-1+this.places.indexOf(place)]
                 this.places[-1+this.places.indexOf(place)] = this.places[this.places.indexOf(place)]
                 this.places[this.places.indexOf(place)] = temp
-            }
+            } 
         })
         item.querySelector('.movedown').addEventListener('click', ev => {
             const item = ev.target.parentElement.parentElement
