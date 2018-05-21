@@ -26,9 +26,6 @@ class App {
 
         item.querySelector('.warning').addEventListener('click', this.favPlace.bind(this, place))
 
-        item.querySelector('.warning').addEventListener('click', ev => {
-
-        })
         item
             .querySelector('.moveup')
             .addEventListener('click', ev => {
@@ -51,12 +48,9 @@ class App {
                     this.places[1+this.places.indexOf(place)].nextSibling = temp
                 }
             })
-        item
-            .querySelector('.edit')
-            .addEventListener('click', ev => {
-                const item = ev.target.parentElement.parentElement.querySelector('.placeName')
-                item.contentEditable = (item.contentEditable === "false")
-            })
+
+        item.querySelector('.button.edit').addEventListener('click', this.editPlace.bind(this, place))
+
         item
             .querySelector('.placeName')
             .addEventListener('keyup', ev => {
@@ -78,6 +72,24 @@ class App {
     favPlace (place, ev) {
         const fav = ev.target.parentElement.parentElement
         place.fav = fav.classList.toggle('fav')
+    }
+
+    editPlace (place, ev) {
+        const item = ev.target.parentElement.parentElement
+        const nameField = item.querySelector('.placeName')
+        const btn = ev.target
+
+        if (nameField.isContentEditable) {
+            nameField.contentEditable = false
+            btn.textContent = 'Edit'
+            btn.classList.remove('success')
+        } else {
+            nameField.contentEditable = true
+            nameField.focus()
+            btn.textContent = 'Save'
+            btn.classList.add('success')
+        }
+        place.name = nameField.textContent
     }
 
     handleSubmit(ev) {

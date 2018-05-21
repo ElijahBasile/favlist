@@ -3,7 +3,7 @@ main {
     margin: 1rem auto;
 }
 
-.flickName {
+.placeName {
     margin: 0 .75rem
 }
 
@@ -24,6 +24,7 @@ li:nth-last-child(2)
 }
 
 body {
+    color: white;
     background-image: url(http://files.all-free-download.com//downloadfiles/wallpapers/2560_1600/paris_wallpaper_france_world_1821.jpg);
 }
 
