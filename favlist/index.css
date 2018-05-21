@@ -11,7 +11,7 @@ main {
     display: none;
 }
 
-.favorite {
+.place.fav {
     background-color: gold;
 }
 
@@ -21,4 +21,12 @@ li:nth-last-child(2)
 .button.movedown {
     background-color: #aaa;
     cursor: not-allowed;
+}
+
+body {
+    background-image: url(http://files.all-free-download.com//downloadfiles/wallpapers/2560_1600/paris_wallpaper_france_world_1821.jpg);
+}
+
+li.template {
+    background: gray;
 }
