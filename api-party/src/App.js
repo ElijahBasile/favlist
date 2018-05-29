@@ -14,7 +14,7 @@ class App extends Component {
         </div>
         <ul className="navLinks">
           <li>
-            <NavLink to="">Github</NavLink>
+            <NavLink to="/github">Github API</NavLink>
           </li>
         </ul>
         <Switch>
