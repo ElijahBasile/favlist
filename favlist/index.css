@@ -31,3 +31,12 @@ body {
 li.template {
     background: gray;
 }
+
+.placeName {
+    margin: 0 0.75rem
+  }
+
+  .actions .button {
+    margin-bottom: 0;
+  }
+  

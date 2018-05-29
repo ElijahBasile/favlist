@@ -12,14 +12,23 @@ class App {
             })
     }
 
+    saveOnEnter(place,ev) {
+        if(ev.key === "Enter") {
+            this.editPlace(place,ev)
+        }
+    }
+
 
     renderListItem(place) {
         const item = this.template.cloneNode(true)
         item.classList.remove('template')
         item.dataset.id = place.id
-        item
-            .querySelector('.placeName')
-            .textContent = place.name
+        const nameSpan = item.querySelector('.placeName')
+        nameSpan.textContent = place.name
+        nameSpan.addEventListener(
+            'keypress',
+            this.saveOnEnter.bind(this,place)
+        )
 
         //remove item
         item.querySelector('.alert').addEventListener('click', this.removePlace.bind(this, place))
@@ -62,7 +71,7 @@ class App {
 
     removePlace (place, ev) {
             //remove item from the list
-            const del = ev.target.parentElement.parentElement
+            const del = ev.target.closest('.place')
             del.remove()
 
             //remove from the array
@@ -70,14 +79,14 @@ class App {
     }
 
     favPlace (place, ev) {
-        const fav = ev.target.parentElement.parentElement
+        const fav = ev.target.closest('.place')
         place.fav = fav.classList.toggle('fav')
     }
 
     editPlace (place, ev) {
-        const item = ev.target.parentElement.parentElement
+        const item = ev.target.closest('.place')
         const nameField = item.querySelector('.placeName')
-        const btn = ev.target
+        const btn = item.querySelector('.edit.button')
 
         if (nameField.isContentEditable) {
             nameField.contentEditable = false
